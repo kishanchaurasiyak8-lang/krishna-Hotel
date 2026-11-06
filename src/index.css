@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-cream font-sans text-navy-900 antialiased;
+  }
+
+  h1,
+  h2,
+  h3 {
+    @apply font-display font-semibold leading-[1.2] text-navy-900;
+  }
+
+  section[id] {
+    scroll-margin-top: 5rem;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-navy-900 px-6 py-3 text-sm font-medium text-cream shadow-sm transition duration-300 hover:bg-navy-700 hover:shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-gold-500 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-60;
+  }
+
+  .btn-gold {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-gold-500 px-6 py-3 text-sm font-semibold text-navy-900 shadow-sm transition duration-300 hover:bg-gold-400 hover:shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-navy-900 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-60;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-navy-200 bg-white px-5 py-2.5 text-sm font-medium text-navy-900 transition duration-300 hover:border-gold-500 hover:text-gold-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-gold-500 disabled:cursor-not-allowed disabled:opacity-60;
+  }
+
+  .input-base {
+    @apply w-full rounded-xl border border-navy-200 bg-white px-4 py-3 text-sm text-navy-900 placeholder:text-navy-300 transition duration-200 focus:border-gold-500 focus:outline-none focus:ring-2 focus:ring-gold-200;
+  }
+
+  .input-invalid {
+    @apply border-red-500 focus:border-red-500 focus:ring-red-100;
+  }
+
+  .label-base {
+    @apply mb-1.5 block text-xs font-semibold uppercase tracking-wider text-navy-600;
+  }
+
+  .card-base {
+    @apply overflow-hidden rounded-2xl border border-navy-100 bg-white shadow-sm;
+  }
+
+  .chip {
+    @apply rounded-full border px-4 py-2 text-sm font-medium transition duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-gold-500;
+  }
+
+  .chip-active {
+    @apply border-navy-900 bg-navy-900 text-cream;
+  }
+
+  .chip-idle {
+    @apply border-navy-200 bg-white text-navy-700 hover:border-gold-500 hover:text-gold-700;
+  }
+}
